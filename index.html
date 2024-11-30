@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portufolio</title>
+
+
+    <link rel="stylesheet" href="dist/output.css" />
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+        } else {
+        document.documentElement.classList.remove('dark')
+        }
+
+        
+    </script>
+
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+
+    <!-- header star  -->
+
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="px-4" data-aos="flip-left" 3>
+                    <a href="#" class="font-bold text-lg text-blue-400 block py-6">SELLO</a>
+                </div>
+                <div class="flex items-center px-4">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>  
+                    </button>
+
+
+                    <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none lg:dark:bg-transparent dark:bg-dark dark:shadow-slate-500">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white" data-aos="fade-down" data-aos-delay="000" data-aos-duration="1000"> Home</a>
+                            </li>
+                            <li class="group">
+                                <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000"> About</a>
+                            </li>
+                            <li class="group">
+                                <a href="#tech" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000"> Tech & Tools</a>
+                            </li>
+                            <li class="group">
+                                <a href="#project" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white" data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000"> Project</a>
+                            </li>
+                            <!-- <li class="group">
+                                <a href="#clients" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white"  data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000"> Clients</a>
+                            </li>
+                            <li class="group">
+                                <a href="#blog" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white"  data-aos="fade-down" data-aos-delay="400" data-aos-duration="1000"> Blog</a>
+                            </li> -->
+                            <li class="group">
+                                <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white"  data-aos="fade-down" data-aos-delay="500" data-aos-duration="1000"> Contact</a>
+                            </li>
+                            <li class="flex items-center pl-8 mt-3 lg:mt-0">
+                                <div class="flex" data-aos="flip-left" data-aos-delay="600" data-aos-duration="1000">
+                                    <span class="mr-2 text-sm text-slate-500">Light</span>
+                                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                                    <label for="dark-toggle">
+                                        <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500">
+                                            <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                                        </div>
+                                    </label>
+                                    <span class="ml-2 text-sm text-slate-500">Dark</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- header end  -->
+    
+    <!-- Hero Section Start -->
+    <section id="home" class="pt-36 dark:bg-dark">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full self-center px-4 lg:w-1/2" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                    <h1 class="text-base font-semibold text-blue-400 md:text-xl">Hi, my name is <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl dark:text-white">Octavio Ximenes</span></h1>
+                    <!-- <h2 class="font-medium text-secndary text-lg mb-5 lg:text-2xl dark:text-white">Front-end & <span class="text-dark dark:text-white">Back-end Developer</span></h2> -->
+                    <p class="font-medium text-secondary mb-10 leading-relaxed">I am a developer who likes to build websites. <span class="text-dark font-semibold"></span></p>
+
+                    <a href="#" class="text-base font-semibold text-white bg-blue-400 py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">View My CV</a>
+                </div>
+
+                <div class="w-full self-end px-4 lg:w-1/2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                    <div class="relative mt-0 lg:mt-9 lg:right-0">
+                        <img src="dist/img/octo.png" alt="Octo Ximenes" class="max-w-full mx-auto relative z-10 " data-aos="fade-in"/>
+
+                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
+                           
+
+                            <svg width="300" height="300" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#38bdf8"
+                                    d="M43.2,-60C49.6,-54.7,44.1,-33.6,41.4,-18.9C38.8,-4.1,39,4.3,35.7,10.7C32.4,17.1,25.6,21.5,19.1,25.6C12.5,29.7,6.3,33.6,-5.2,40.7C-16.6,47.9,-33.3,58.3,-39.1,53.9C-44.9,49.6,-39.8,30.4,-46.1,14.2C-52.5,-2,-70.3,-15.3,-66.8,-20.3C-63.3,-25.3,-38.5,-22.1,-23.8,-24.6C-9.1,-27.2,-4.6,-35.6,6.9,-45.1C18.4,-54.6,36.7,-65.2,43.2,-60Z"
+                                    transform="translate(100 100) scale(1.1)" />
+                            </svg>
+
+                            <!-- <svg width="300" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#14b8a6"
+                                    d="M39.5,-20.4C43.9,0.5,35,18.2,19.4,30.3C3.9,42.4,-18.2,49,-29.6,40.7C-41,32.5,-41.6,9.4,-34.8,-14.8C-28.1,-39,-14.1,-64.3,1.8,-64.8C17.6,-65.4,35.2,-41.3,39.5,-20.4Z"
+                                    transform="translate(100 100) scale(1.1)" />
+                            </svg> -->
+
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+
+    <!-- About Section Start -->
+
+    <section id="about" class="pt-36 pb-20 dark:bg-dark">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 mb-10 lg:w-1/2" data-aos="fade-right" data-aos-duration="1000">
+                    <h4 class="font-bold text-dark text-3xl mb-3 max-w-md lg:text-4xl dark:text-white">About Me</h4>
+                    <!-- <h2 class="font-bold text-dark text-3xl mb-3 max-w-md lg:text-4xl dark:text-white">Yuk, Belejar web programming di sello.info</h2> -->
+                            <p class="font-medium text-justify text-secondary max-w-xl lg:text-lg dark:text-slate-400">my name is octavio ximenes, i graduated from IPDC, and once worked at VIETTEL Timor-Leste,
+                        as IT staff (NOC Monitoring), for 3 years and resigned. and started working at BNCTL as an IT Staff
+                        until now, I like coding starting from my 3rd semester until now. coding got me
+                        being a critical and thorough person because it stimulates me to be able to see problems in a place
+                        and how to solve the problem using logic and put it on the website. that's what
+                        makes me like coding and work hard to create websites and develop websites.
+                        I also like to learn new things in technology which allows me to think about developing
+                        in the future.
+
+                        </p>
+                      <div class="flex lg:hidden lg:visible">
+                            <div class="cursor-pointer px-2 py-3 text-primary transition-all duration-300 hover:-translate-y-1 hover:text-accent" title="Whatsap">
+                                <a href="https://wa.me/76141304" target="_blank" class="w-9 h-9 mr-3 rounded-full flex  justify-center items-center border border-slate-300 dark:bg-white hover:border-primary hover:bg-primary hover:text-white">
+                                    <svg role="img" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>WhatsApp</title><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                                </a>
+                            </div>
+                            <div class="cursor-pointer px-2 py-3 text-primary transition-all duration-300 hover:-translate-y-1 hover:text-accent" title="Linkedin">
+                                <a href="https://www.facebook.com/OctavioXimenes96/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex  justify-center items-center border border-slate-300 dark:bg-white hover:border-primary hover:bg-primary hover:text-white">
+                                <svg role="img" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                </a>
+                            </div>
+                      </div>
+                            
+                        
+                     
+                           
+                        
+                </div>
+                <div class="w-full px-4 lg:w-1/2" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                  
+              
+                <div 
+                role="tablist" 
+                aria-label="tabs" 
+                class="relative md:w-max md:mx-auto h-12 grid grid-cols-3 items-center px-[3px] rounded-full bg-gray-900/20 overflow-hidden shadow-2xl shadow-900/20 transition dark:bg-white">
+            
+                    <div class="absolute indicator sm:w-44 w-[105px] md:w-32 h-11 my-auto top-0 bottom-0 left-0 rounded-full bg-white shadow-md dark:bg-slate-400/50"></div>
+                    <button
+                    role="tab" 
+                    aria-selected="true" 
+                    aria-controls="panel-1" 
+                    id="tab-1" 
+                    tabindex="0" 
+                    class="relative block h-10 px-0 md:px-6 tab rounded-full">
+                        <span class="text-gray-800">Education</span>
+                    </button>
+                    <button
+                    role="tab" 
+                    aria-selected="false" 
+                    aria-controls="panel-2" 
+                    id="tab-2" 
+                    tabindex="-1" 
+                    class="relative block h-10 px-0 md:px-6 tab rounded-full">
+                        <span class="text-gray-800">Experience</span>
+                    </button>
+                    <button
+                    role="tab" 
+                    aria-selected="true" 
+                    aria-controls="panel-3" 
+                    id="tab-3" 
+                    tabindex="-1" 
+                    class="relative block h-10 px-0 md:px-6 tab rounded-full">
+                        <span class="text-gray-800">Certification</span>
+                    </button>
+
+                
+                </div>
+                <div class="mt-4 relative rounded-3xl overflow-y-scroll">
+                    <div 
+                    role="tabpanel"
+                    id="panel-1"
+                    class="tab-panel p-6 transition duration-300"
+                     >
+                        <h2 class="text-base font-semibold text-gray-800 dark:text-gray-200"> Informatic Engineering</h2>
+                        <a href="https://ipdc.edu.tl/" target="_blank"><h4 class="font-semibold text-xl text-sky-500 hover:underline">@Instituto Profissional De Canossa</h4></a>
+                        <p class="text-dark mt-1 text-[10px] font-semibold dark:text-gray-400">2015 - 2018</p>
+                        
+                       
+                         <li class="mt-4 text-gray-600 text-justify text-xs leading-relaxed md:text-sm lg:text-base dark:text-gray-400">I enrolled in informatics engineering program with motivation. that commercial work will be replaced by technology in the future, so I decided to pursue this field.</li>
+                        <li class="mt-4 text-gray-600 text-justify text-xs leading-relaxed md:text-sm lg:text-base dark:text-gray-400">originally the first semester I was more interested in the field of computer hardware repair,then switch back to graphic design and video.</li>
+                            
+                       
+                        <li class="mt-4 text-gray-600 text-justify text-xs leading-relaxed md:text-sm lg:text-base dark:text-gray-400">after all that, I finally learned coding for the first time in semester 3, that's where I started to fall in love with coding and continue to code until now. I am also active in the coding community and learning bash scripts and command lines on linux, windows servers and also DevOp</li>
+                
+                       
+                    </div>
+
+                    
+                    <div 
+                    role="tabpanel"
+                    id="panel-2"
+                    class="absolute top-0 invisible opacity-0 tab-panel p-6 transition duration-300"
+                     >
+                       <a href="https://www.telemor.tl/"><h2 class="text-base font-semibold text-sky-500  hover:underline"> @Viettel Timor Leste Unip, Lda (Telemor)</h2></a>
+                       
+                        <p class="text-dark mt-1 text-[10px] font-semibold dark:text-gray-400">2019 - 2022</p>
+                        <h5 class="font-semibold mt-4 text-dark dark:text-gray-200">IT Staff</h5>
+                        <p class="font-semibold text-gray-500 text-[12px] italic mb-2 dark:text-gray-400">NOC Team</p>
+                         <li class="mt-4 text-gray-600 text-justify text-xs leading-relaxed md:text-sm lg:text-base dark:text-gray-400">Job Description : Monitoring System ( Network Operating System ) monitor the performance and capacity of server/ computer System using a variety of tools, looking for hardware, software environmental alerts of malfunction when an issue is identified.
+                            
+                         </li>
+                         <p class="mt-4 text-gray-600 text-justify italic text-xs leading-relaxed md:text-sm lg:text-base dark:text-gray-400">Tools Monitoring Was Used : Monitoring Application Manager ( Server and Web Services), Monitoring NOCPRO ( IT Application, Mobile Core, IP Alarm And Transmission Alarm ),Monitoring OTTTV ( all TV channel and OTTTV web server ), Monitoring IPMS IT Devices, Monitoring Application Status Monitor, Monitoring Thread manager.</p>
+
+                         <a href="https://bnctl.tl/"><h2 class="text-base font-semibold text-sky-500 mt-4  hover:underline"> @Banco Nacional Comercio de TImor-Leste ( BNCTL )</h2></a>
+                       
+                        <p class="text-dark mt-1 text-[10px] font-semibold dark:text-gray-400">2022 - Present</p>
+                        <h5 class="font-semibold mt-4 text-dark dark:text-gray-200">IT Staff</h5>
+                        <p class="font-semibold text-gray-500 text-[12px] italic mb-2 dark:text-gray-400">Database Management & Helpdesk Support</p>
+                         <li class="mt-4 text-gray-600 text-justify text-xs leading-relaxed md:text-sm lg:text-base dark:text-gray-400">as stated above I support Database Administrator to back up databases using MSSQL server Management studio, make a database report every week and ensure the database files that have been backed up are intact. also backing up the helpdesk in work such as repairing computer hardware, printers, CCTV configuration and backups and other helpdesk work.
+                         In all of my work above, I also got several projects to create web-based applications.
+                         </li>
+
+
+                         <p class="font-semibold text-gray-500 text-[12px] italic mb-2 dark:text-gray-400 mt-10">CBS ( Core Banking System )</p>
+                         <li class="mt-4 text-gray-600 text-justify text-xs leading-relaxed md:text-sm lg:text-base dark:text-gray-400">A core banking system is a software platform that manages the core data and processes of a bank.
+                         </li>
+                         
+                         <!-- <li class="mt-4 text-gray-600 text-justify text-xs leading-relaxed md:text-sm lg:text-base dark:text-gray-400">My experience in the world of work so far may not match my passions such as coding, developer and DevOp, but in between jobs I also position myself as a freelance developer to keep coding and learning the new technology and making projects personal and Company and others.
+                         </li> -->
+                         
+                       
+
+                        
+                         
+                         
+                    </div>
+                    <div 
+                    role="tabpanel"
+                    id="panel-3"
+                    class="absolute top-0 invisible opacity-0 tab-panel p-6 transition duration-300"
+                     >
+
+                       <h2 class="font-semibold text-sm mb-2 dark:text-gray-200">Course <a href="https://www.udemy.com/" class="text-sky-500  hover:underline" target="_blank">@Udemy</a> </h2>
+                       
+                     
+                        <li class="dark:text-gray-400"><a href="https://www.udemy.com/certificate/UC-03e9b32e-ec3e-4d13-b912-ff47a11bab0f/" target="_blank" class="text-gray-600 text-justify text-xs cursor-pointer hover:text-sm hover:text-cyan-500 py-1 group relative duration-300 dark:text-gray-400">Docker : Pemula Sampai Mahir<svg  class="h-5 w-5 inline-flex group-hover:scale-125 transition-all rotate-45 group-hover:rotate-90 mx-2" version="1.1" id="ios7_x5F_arrows_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><style>.st0{display:none}.st1{display:inline}</style><g id="_x34__1_"><path class="dark:fill-cyan-500 duration-500"  d="M64.1 0C28.8 0 .2 28.7.2 64s28.6 64 63.9 64S128 99.3 128 64c-.1-35.3-28.7-64-63.9-64zm0 122.7C31.7 122.7 5.5 96.4 5.5 64c0-32.4 26.2-58.7 58.6-58.7 32.3 0 58.6 26.3 58.6 58.7-.1 32.4-26.3 58.7-58.6 58.7zm-.3-93.9L33.1 59.5l3.8 3.8 24.5-24.5V104h5.3V39.4l24 24 3.8-3.8-30.7-30.8z" id="icon_35_"/></g></svg></a>
+                        </li>
+                        
+                        <h2 class="font-semibold text-sm mb-2 mt-4 dark:text-gray-200">Course <a href="https://www.udemy.com/" class="text-sky-500  hover:underline" target="_blank">@Coding Studio</a> </h2>
+                       
+                     
+                        <li class="dark:text-gray-400"><a href="https://codingstudio.id/certificate/77DF5D8094-75BB0EFD3C-75BB0ED437/" target="_blank" class="text-gray-600 text-justify text-xs cursor-pointer hover:text-sm hover:text-cyan-500 py-1 group relative duration-300 dark:text-gray-400">Fundamental Front-End Web Development I<svg  class="h-5 w-5 inline-flex group-hover:scale-125 transition-all rotate-45 group-hover:rotate-90 mx-2" version="1.1" id="ios7_x5F_arrows_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><style>.st0{display:none}.st1{display:inline}</style><g id="_x34__1_"><path class="dark:fill-cyan-500 duration-500"  d="M64.1 0C28.8 0 .2 28.7.2 64s28.6 64 63.9 64S128 99.3 128 64c-.1-35.3-28.7-64-63.9-64zm0 122.7C31.7 122.7 5.5 96.4 5.5 64c0-32.4 26.2-58.7 58.6-58.7 32.3 0 58.6 26.3 58.6 58.7-.1 32.4-26.3 58.7-58.6 58.7zm-.3-93.9L33.1 59.5l3.8 3.8 24.5-24.5V104h5.3V39.4l24 24 3.8-3.8-30.7-30.8z" id="icon_35_"/></g></svg></a>
+                        </li>
+                         <li class="dark:text-gray-400"><a href="https://codingstudio.id/certificate/77DF5D8094-77F17B8FED-75BB0ED437/" target="_blank" class="text-gray-600 text-justify text-xs cursor-pointer hover:text-sm hover:text-cyan-500 py-1 group relative duration-300 dark:text-gray-400">Fundamental Front-End Web Development II<svg  class="h-5 w-5 inline-flex group-hover:scale-125 transition-all rotate-45 group-hover:rotate-90 mx-2" version="1.1" id="ios7_x5F_arrows_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><style>.st0{display:none}.st1{display:inline}</style><g id="_x34__1_"><path class="dark:fill-cyan-500 duration-500"  d="M64.1 0C28.8 0 .2 28.7.2 64s28.6 64 63.9 64S128 99.3 128 64c-.1-35.3-28.7-64-63.9-64zm0 122.7C31.7 122.7 5.5 96.4 5.5 64c0-32.4 26.2-58.7 58.6-58.7 32.3 0 58.6 26.3 58.6 58.7-.1 32.4-26.3 58.7-58.6 58.7zm-.3-93.9L33.1 59.5l3.8 3.8 24.5-24.5V104h5.3V39.4l24 24 3.8-3.8-30.7-30.8z" id="icon_35_"/></g></svg></a>
+                        </li>
+
+
+                       <h2 class="font-semibold text-sm mb-2 mt-4 dark:text-gray-400">Webinar <a href="https://eduparx.id/" class="text-sky-500  hover:underline" target="_blank">@Inixindo</a> </h2>
+                       
+                        
+                        <!-- <li><a href="https://eduparx.id/others/verifyCertificate?number=68293181-c342-4b37-8c2c-3a03ef082271" target="_blank" class="text-gray-600 text-justify text-xs cursor-pointer hover:text-sm hover:text-cyan-500 py-1 group relative duration-300">Asesmen Kerentanan Keamanan Serve Linux<img src="/dist/img/arrow.png" alt="" class="h-5 w-5 inline-flex group-hover:scale-125 transition-all group-hover:rotate-45 mx-2"></a> -->
+
+
+                            <li class="dark:text-gray-400"><a href="https://eduparx.id/others/verifyCertificate?number=68293181-c342-4b37-8c2c-3a03ef082271" target="_blank" class="text-gray-600 text-justify text-xs cursor-pointer hover:text-sm hover:text-cyan-500 py-1 group relative duration-300 dark:text-gray-400">Asesmen Kerentanan Keamanan Serve Linux<svg  class="h-5 w-5 inline-flex group-hover:scale-125 transition-all rotate-45 group-hover:rotate-90 mx-2" version="1.1" id="ios7_x5F_arrows_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><style>.st0{display:none}.st1{display:inline}</style><g id="_x34__1_"><path class="dark:fill-cyan-500 duration-500"  d="M64.1 0C28.8 0 .2 28.7.2 64s28.6 64 63.9 64S128 99.3 128 64c-.1-35.3-28.7-64-63.9-64zm0 122.7C31.7 122.7 5.5 96.4 5.5 64c0-32.4 26.2-58.7 58.6-58.7 32.3 0 58.6 26.3 58.6 58.7-.1 32.4-26.3 58.7-58.6 58.7zm-.3-93.9L33.1 59.5l3.8 3.8 24.5-24.5V104h5.3V39.4l24 24 3.8-3.8-30.7-30.8z" id="icon_35_"/></g></svg></a>
+                            </li>
+                            <li class="dark:text-gray-400"><a href="https://eduparx.id/others/verifyCertificate?number=798ae827-9544-423a-ac18-9f1b881df81a" target="_blank" class="text-gray-600 text-justify text-xs cursor-pointer hover:text-sm hover:text-cyan-500 py-1 group relative duration-300 dark:text-gray-400">Server Monitoring dengan ELK (Elastic, Logstash, Kibana)<svg  class="h-5 w-5 inline-flex group-hover:scale-125 transition-all rotate-45 group-hover:rotate-90 mx-2" version="1.1" id="ios7_x5F_arrows_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><style>.st0{display:none}.st1{display:inline}</style><g id="_x34__1_"><path class="dark:fill-cyan-500 duration-500"  d="M64.1 0C28.8 0 .2 28.7.2 64s28.6 64 63.9 64S128 99.3 128 64c-.1-35.3-28.7-64-63.9-64zm0 122.7C31.7 122.7 5.5 96.4 5.5 64c0-32.4 26.2-58.7 58.6-58.7 32.3 0 58.6 26.3 58.6 58.7-.1 32.4-26.3 58.7-58.6 58.7zm-.3-93.9L33.1 59.5l3.8 3.8 24.5-24.5V104h5.3V39.4l24 24 3.8-3.8-30.7-30.8z" id="icon_35_"/></g></svg></a>
+                            </li>
+                            <li class="dark:text-gray-400"><a href="https://eduparx.id/others/verifyCertificate?number=411a0090-c728-4535-8ed5-2cfb7baba964" target="_blank" class="text-gray-600 text-justify text-xs cursor-pointer hover:text-sm hover:text-cyan-500 py-1 group relative duration-300 dark:text-gray-400">Memahami dan Megimplementasikan Arsitektur Zero Trust Menurut Pedoman NIST<svg  class="h-5 w-5 inline-flex group-hover:scale-125 transition-all rotate-45 group-hover:rotate-90 mx-2" version="1.1" id="ios7_x5F_arrows_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><style>.st0{display:none}.st1{display:inline}</style><g id="_x34__1_"><path class="dark:fill-cyan-500 duration-500"  d="M64.1 0C28.8 0 .2 28.7.2 64s28.6 64 63.9 64S128 99.3 128 64c-.1-35.3-28.7-64-63.9-64zm0 122.7C31.7 122.7 5.5 96.4 5.5 64c0-32.4 26.2-58.7 58.6-58.7 32.3 0 58.6 26.3 58.6 58.7-.1 32.4-26.3 58.7-58.6 58.7zm-.3-93.9L33.1 59.5l3.8 3.8 24.5-24.5V104h5.3V39.4l24 24 3.8-3.8-30.7-30.8z" id="icon_35_"/></g></svg></a>
+                            </li>
+                            <li class="dark:text-gray-400"><a href="https://eduparx.id/others/verifyCertificate?number=cee83669-1e53-4847-9c9b-92f4aee8cc4f" target="_blank" class="text-gray-600 text-justify text-xs cursor-pointer hover:text-sm hover:text-cyan-500 py-1 group relative duration-300 dark:text-gray-400">Melindungi Keamanan Data dengan Teknologi Enkripsi Modern<svg  class="h-5 w-5 inline-flex group-hover:scale-125 transition-all rotate-45 group-hover:rotate-90 mx-2" version="1.1" id="ios7_x5F_arrows_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><style>.st0{display:none}.st1{display:inline}</style><g id="_x34__1_"><path class="dark:fill-cyan-500 duration-500"  d="M64.1 0C28.8 0 .2 28.7.2 64s28.6 64 63.9 64S128 99.3 128 64c-.1-35.3-28.7-64-63.9-64zm0 122.7C31.7 122.7 5.5 96.4 5.5 64c0-32.4 26.2-58.7 58.6-58.7 32.3 0 58.6 26.3 58.6 58.7-.1 32.4-26.3 58.7-58.6 58.7zm-.3-93.9L33.1 59.5l3.8 3.8 24.5-24.5V104h5.3V39.4l24 24 3.8-3.8-30.7-30.8z" id="icon_35_"/></g></svg></a>
+                            </li> 
+                            <li class="dark:text-gray-400"><a href="https://eduparx.id/others/verifyCertificate?number=b3202a0e-59be-4c5e-bd43-24baf93e482f" target="_blank" class="text-gray-600 text-justify text-xs cursor-pointer hover:text-sm hover:text-cyan-500 py-1 group relative duration-300 dark:text-gray-400">Pemulihan Bencana dan Rencana Darurat Keamanan IT di Organisasi<svg  class="h-5 w-5 inline-flex group-hover:scale-125 transition-all rotate-45 group-hover:rotate-90 mx-2" version="1.1" id="ios7_x5F_arrows_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><style>.st0{display:none}.st1{display:inline}</style><g id="_x34__1_"><path class="dark:fill-cyan-500 duration-500"  d="M64.1 0C28.8 0 .2 28.7.2 64s28.6 64 63.9 64S128 99.3 128 64c-.1-35.3-28.7-64-63.9-64zm0 122.7C31.7 122.7 5.5 96.4 5.5 64c0-32.4 26.2-58.7 58.6-58.7 32.3 0 58.6 26.3 58.6 58.7-.1 32.4-26.3 58.7-58.6 58.7zm-.3-93.9L33.1 59.5l3.8 3.8 24.5-24.5V104h5.3V39.4l24 24 3.8-3.8-30.7-30.8z" id="icon_35_"/></g></svg></a>
+                            </li> 
+                            <li class="dark:text-gray-400"><a href="https://eduparx.id/webinar/history/detail/b1e305b2-b02a-4de6-9431-650a40daf11a" target="_blank" class="text-gray-600 text-justify text-xs cursor-pointer hover:text-sm hover:text-cyan-500 py-1 group relative duration-300 dark:text-gray-400">Blockchain dan Data: Masa Depan Keamanan dan Keandalan<svg  class="h-5 w-5 inline-flex group-hover:scale-125 transition-all rotate-45 group-hover:rotate-90 mx-2" version="1.1" id="ios7_x5F_arrows_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><style>.st0{display:none}.st1{display:inline}</style><g id="_x34__1_"><path class="dark:fill-cyan-500 duration-500"  d="M64.1 0C28.8 0 .2 28.7.2 64s28.6 64 63.9 64S128 99.3 128 64c-.1-35.3-28.7-64-63.9-64zm0 122.7C31.7 122.7 5.5 96.4 5.5 64c0-32.4 26.2-58.7 58.6-58.7 32.3 0 58.6 26.3 58.6 58.7-.1 32.4-26.3 58.7-58.6 58.7zm-.3-93.9L33.1 59.5l3.8 3.8 24.5-24.5V104h5.3V39.4l24 24 3.8-3.8-30.7-30.8z" id="icon_35_"/></g></svg></a>
+                            </li>
+                            <li class="dark:text-gray-400"><a href="https://eduparx.id/others/verifyCertificate?number=9bbc4d1b-a6cd-487e-b1a3-590f6f211a97" target="_blank" class="text-gray-600 text-justify text-xs cursor-pointer hover:text-sm hover:text-cyan-500 py-1 group relative duration-300 dark:text-gray-400">Meningkat Keamanan Siber dengan Analisis Perilaku Manusia<svg  class="h-5 w-5 inline-flex group-hover:scale-125 transition-all rotate-45 group-hover:rotate-90 mx-2" version="1.1" id="ios7_x5F_arrows_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><style>.st0{display:none}.st1{display:inline}</style><g id="_x34__1_"><path class="dark:fill-cyan-500 duration-500"  d="M64.1 0C28.8 0 .2 28.7.2 64s28.6 64 63.9 64S128 99.3 128 64c-.1-35.3-28.7-64-63.9-64zm0 122.7C31.7 122.7 5.5 96.4 5.5 64c0-32.4 26.2-58.7 58.6-58.7 32.3 0 58.6 26.3 58.6 58.7-.1 32.4-26.3 58.7-58.6 58.7zm-.3-93.9L33.1 59.5l3.8 3.8 24.5-24.5V104h5.3V39.4l24 24 3.8-3.8-30.7-30.8z" id="icon_35_"/></g></svg></a>
+                            </li> 
+                            <li class="dark:text-gray-400"><a href="https://eduparx.id/others/verifyCertificate?number=cee83669-1e53-4847-9c9b-92f4aee8cc4f" target="_blank" class="text-gray-600 text-justify text-xs cursor-pointer hover:text-sm hover:text-cyan-500 py-1 group relative duration-300 dark:text-gray-400">Melindungi Keamanan Data dengan Teknologi Enkripsi Modern<svg  class="h-5 w-5 inline-flex group-hover:scale-125 transition-all rotate-45 group-hover:rotate-90 mx-2" version="1.1" id="ios7_x5F_arrows_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><style>.st0{display:none}.st1{display:inline}</style><g id="_x34__1_"><path class="dark:fill-cyan-500 duration-500"  d="M64.1 0C28.8 0 .2 28.7.2 64s28.6 64 63.9 64S128 99.3 128 64c-.1-35.3-28.7-64-63.9-64zm0 122.7C31.7 122.7 5.5 96.4 5.5 64c0-32.4 26.2-58.7 58.6-58.7 32.3 0 58.6 26.3 58.6 58.7-.1 32.4-26.3 58.7-58.6 58.7zm-.3-93.9L33.1 59.5l3.8 3.8 24.5-24.5V104h5.3V39.4l24 24 3.8-3.8-30.7-30.8z" id="icon_35_"/></g></svg></a>
+                            </li> 
+                            <li class="dark:text-gray-400"><a href="https://eduparx.id/others/verifyCertificate?number=2999a652-ca63-4a4e-a4d9-46a54ecac1ee" target="_blank" class="text-gray-600 text-justify text-xs cursor-pointer hover:text-sm hover:text-cyan-500 py-1 group relative duration-300 dark:text-gray-400">Membangun Data Warehouse yang Efektif untuk Keberhasilan Organisasi<svg  class="h-5 w-5 inline-flex group-hover:scale-125 transition-all rotate-45 group-hover:rotate-90 mx-2" version="1.1" id="ios7_x5F_arrows_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><style>.st0{display:none}.st1{display:inline}</style><g id="_x34__1_"><path class="dark:fill-cyan-500 duration-500"  d="M64.1 0C28.8 0 .2 28.7.2 64s28.6 64 63.9 64S128 99.3 128 64c-.1-35.3-28.7-64-63.9-64zm0 122.7C31.7 122.7 5.5 96.4 5.5 64c0-32.4 26.2-58.7 58.6-58.7 32.3 0 58.6 26.3 58.6 58.7-.1 32.4-26.3 58.7-58.6 58.7zm-.3-93.9L33.1 59.5l3.8 3.8 24.5-24.5V104h5.3V39.4l24 24 3.8-3.8-30.7-30.8z" id="icon_35_"/></g></svg></a>
+                            </li> 
+                            <li class="dark:text-gray-400"><a href="https://eduparx.id/others/verifyCertificate?number=aec45cdd-e464-4e95-b615-3046b9822e78" target="_blank" class="text-gray-600 text-justify text-xs cursor-pointer hover:text-sm hover:text-cyan-500 py-1 group relative duration-300 dark:text-gray-400">Data dan Inovasi: Memahami Peran Data dalam Mendorong Pertumbuhan Organisasi<svg  class="h-5 w-5 inline-flex group-hover:scale-125 transition-all rotate-45 group-hover:rotate-90 mx-2" version="1.1" id="ios7_x5F_arrows_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><style>.st0{display:none}.st1{display:inline}</style><g id="_x34__1_"><path class="dark:fill-cyan-500 duration-500"  d="M64.1 0C28.8 0 .2 28.7.2 64s28.6 64 63.9 64S128 99.3 128 64c-.1-35.3-28.7-64-63.9-64zm0 122.7C31.7 122.7 5.5 96.4 5.5 64c0-32.4 26.2-58.7 58.6-58.7 32.3 0 58.6 26.3 58.6 58.7-.1 32.4-26.3 58.7-58.6 58.7zm-.3-93.9L33.1 59.5l3.8 3.8 24.5-24.5V104h5.3V39.4l24 24 3.8-3.8-30.7-30.8z" id="icon_35_"/></g></svg></a>
+                            </li> 
+                            <li class="dark:text-gray-400"><a href="https://eduparx.id/others/verifyCertificate?number=c25ebf72-849f-4a30-bac5-710ff9a9fc80" target="_blank" class="text-gray-600 text-justify text-xs cursor-pointer hover:text-sm hover:text-cyan-500 py-1 group relative duration-300 dark:text-gray-400">Membuat Data Berbicara dengan Visualisasi yang Efektif<svg  class="h-5 w-5 inline-flex group-hover:scale-125 transition-all rotate-45 group-hover:rotate-90 mx-2" version="1.1" id="ios7_x5F_arrows_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><style>.st0{display:none}.st1{display:inline}</style><g id="_x34__1_"><path class="dark:fill-cyan-500 duration-500"  d="M64.1 0C28.8 0 .2 28.7.2 64s28.6 64 63.9 64S128 99.3 128 64c-.1-35.3-28.7-64-63.9-64zm0 122.7C31.7 122.7 5.5 96.4 5.5 64c0-32.4 26.2-58.7 58.6-58.7 32.3 0 58.6 26.3 58.6 58.7-.1 32.4-26.3 58.7-58.6 58.7zm-.3-93.9L33.1 59.5l3.8 3.8 24.5-24.5V104h5.3V39.4l24 24 3.8-3.8-30.7-30.8z" id="icon_35_"/></g></svg></a>
+                            </li> 
+                            <li class="dark:text-gray-400"><a href="https://eduparx.id/others/verifyCertificate?number=81902cfd-0a79-414a-8db0-11adb60a7157" target="_blank" class="text-gray-600 text-justify text-xs cursor-pointer hover:text-sm hover:text-cyan-500 py-1 group relative duration-300 dark:text-gray-400">Memahami Analisis Sentimen untuk Menyelami Opini dengan Data<svg  class="h-5 w-5 inline-flex group-hover:scale-125 transition-all rotate-45 group-hover:rotate-90 mx-2" version="1.1" id="ios7_x5F_arrows_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><style>.st0{display:none}.st1{display:inline}</style><g id="_x34__1_"><path class="dark:fill-cyan-500 duration-500"  d="M64.1 0C28.8 0 .2 28.7.2 64s28.6 64 63.9 64S128 99.3 128 64c-.1-35.3-28.7-64-63.9-64zm0 122.7C31.7 122.7 5.5 96.4 5.5 64c0-32.4 26.2-58.7 58.6-58.7 32.3 0 58.6 26.3 58.6 58.7-.1 32.4-26.3 58.7-58.6 58.7zm-.3-93.9L33.1 59.5l3.8 3.8 24.5-24.5V104h5.3V39.4l24 24 3.8-3.8-30.7-30.8z" id="icon_35_"/></g></svg></a>
+                            </li>
+                            <li class="dark:text-gray-400"><a href="https://eduparx.id/others/verifyCertificate?number=07799494-0712-4276-9b69-1704813be4b9" target="_blank" class="text-gray-600 text-justify text-xs cursor-pointer hover:text-sm hover:text-cyan-500 py-1 group relative duration-300 dark:text-gray-400">Memilih Governance and Management Objectives (GMO) yang Sesuai Kebutuhan Organisasi dengan Design Factor COBIT 2019<svg  class="h-5 w-5 inline-flex group-hover:scale-125 transition-all rotate-45 group-hover:rotate-90 mx-2" version="1.1" id="ios7_x5F_arrows_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128" xml:space="preserve"><style>.st0{display:none}.st1{display:inline}</style><g id="_x34__1_"><path class="dark:fill-cyan-500 duration-500"  d="M64.1 0C28.8 0 .2 28.7.2 64s28.6 64 63.9 64S128 99.3 128 64c-.1-35.3-28.7-64-63.9-64zm0 122.7C31.7 122.7 5.5 96.4 5.5 64c0-32.4 26.2-58.7 58.6-58.7 32.3 0 58.6 26.3 58.6 58.7-.1 32.4-26.3 58.7-58.6 58.7zm-.3-93.9L33.1 59.5l3.8 3.8 24.5-24.5V104h5.3V39.4l24 24 3.8-3.8-30.7-30.8z" id="icon_35_"/></g></svg></a>
+                            </li>
+                        
+
+                        
+                         
+                    </div>
+                 
+               
+                   </div>
+                </div> 
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+
+
+      <!-- Tech Section Start -->
+
+    <section id="tech" class="pt-3 pb-15 dark:bg-blue-200 bg-slate-500">
+        <div class="container">
+            <div class="w-full">
+                <div class="max-w-xl mx-auto text-center">
+                    
+                    <h4 class="font-semibold text-xl text-black uppercase pb-3" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">Techology</h4>
+                </div>
+            </div>
+            <div class="flex flex-wrap">
+                <div class="w-full ">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800">
+                        <div class="mt-5 mb-5 grid grid-cols-2 gap-4 px-10 md:grid-cols-3 md:gap-8 xl:grid-cols-4">
+                            
+                            <div class="flex cursor-pointer items-center rounded border border-amber-500 bg-slate-800 group relative hover:bg-slate-700 py-2 lg:px-3 md:px-2"  data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="000">
+                                <div class="flex h-12 w-12 items-center justify-center p-0 group-hover:scale-125 transition-all duration-300 ">
+                                    <img src="/dist/img/Tech/html.svg" alt="" class="transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]">
+                                  
+                                     
+                                </div>
+                            
+                                    <div class="font-semibold text-white group-hover:-translate-y-2 transition-all duration-300 lg:px-3 text-[10px] md:text-sm">HTML</div>
+                                    <div class="font-mono text-[8px] md:text-[10px] translate-x-9 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 md:translate-x-5 lg:translate-x-10 mt-6  text-white transition-all duration-300  absolute lg:text-sm lg:px-3 pl-12 lg:pl-[60px]">Advanced</div>
+                                
+                            </div>
+                            <div class="flex cursor-pointer items-center rounded border border-amber-500 bg-slate-800 group relative hover:bg-slate-700 py-2 lg:px-3 md:px-2" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="100">
+                                <div class="flex h-12 w-12 items-center justify-center p-0 group-hover:scale-125 transition-all duration-300">
+                                    <img src="/dist/img/Tech/css.svg" alt="" class="transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]">
+                                  
+                                     
+                                </div>
+                            
+                                    <div class="font-semibold text-white group-hover:-translate-y-2 transition-all duration-300 lg:px-3 text-[10px] md:text-sm">CSS</div>
+                                    <div class="font-mono text-[8px] md:text-[10px] translate-x-9 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 md:translate-x-5 lg:translate-x-10 mt-6  text-white transition-all duration-300  absolute lg:text-sm lg:px-3 pl-12 lg:pl-[60px]">Advanced</div>
+                                
+                            </div>
+                            <div class="flex cursor-pointer items-center rounded border border-amber-500 bg-slate-800 group relative hover:bg-slate-700 py-2 lg:px-3 md:px-2" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200">
+                                <div class="flex h-12 w-12 items-center justify-center p-0 group-hover:scale-125 transition-all duration-300">
+                                    <img src="/dist/img/Tech/php.svg" alt="" class="transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]">
+                                  
+                                     
+                                </div>
+                            
+                                    <div class="font-semibold text-white group-hover:-translate-y-2 transition-all duration-300 lg:px-3 text-[10px] md:text-sm">PHP</div>
+                                    <div class="font-mono text-[8px] md:text-[10px] translate-x-9 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 md:translate-x-5 lg:translate-x-10 mt-6  text-white transition-all duration-300  absolute lg:px-3 lg:text-sm pl-12 lg:pl-[60px]">Advanced</div>
+                                
+                            </div>
+                            <div class="flex cursor-pointer items-center rounded border border-amber-500 bg-slate-800 group relative hover:bg-slate-700 py-2 lg:px-3 md:px-2" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300">
+                                <div class="flex h-12 w-12 items-center justify-center p-0 group-hover:scale-125 transition-all duration-300">
+                                    <img src="/dist/img/Tech/JS.svg" alt="" class="transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]">
+                                  
+                                     
+                                </div>
+                            
+                                    <div class="font-semibold text-white group-hover:-translate-y-2 transition-all duration-300 lg:px-3 text-[10px] md:text-sm">JavaScript</div>
+                                    <div class="font-mono text-[8px] md:text-[10px] translate-x-9 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 md:translate-x-5 lg:translate-x-10 mt-6  text-white transition-all duration-300  absolute lg:px-3 lg:text-sm pl-12 lg:pl-[60px]">Intermediate</div>
+                                
+                            </div>
+                            <div class="flex cursor-pointer items-center rounded border border-amber-500 bg-slate-800 group relative hover:bg-slate-700 py-2 lg:px-3 md:px-2" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="400">
+                                <div class="flex h-12 w-12 items-center justify-center p-0 group-hover:scale-125 transition-all duration-300">
+                                    <img src="/dist/img/Tech/react.svg" alt="" class="transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]">
+                                  
+                                     
+                                </div>
+                            
+                                    <div class="font-semibold text-white group-hover:-translate-y-2 transition-all duration-300 lg:px-3 text-[10px] md:text-sm">ReactJS</div>
+                                    <div class="font-mono text-[8px] md:text-[10px] translate-x-9 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 md:translate-x-5 lg:translate-x-10 mt-6  text-white transition-all duration-300  absolute lg:px-3 pl-12 lg:text-sm lg:pl-[60px]">Beginer</div>
+                                
+                            </div>
+                            <div class="flex cursor-pointer items-center rounded border border-amber-500 bg-slate-800 group relative hover:bg-slate-700 py-2 lg:px-3 md:px-2" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="500">
+                                <div class="flex h-12 w-12 items-center justify-center p-0 group-hover:scale-125 transition-all duration-300">
+                                    <img src="/dist/img/Tech/laravel.svg" alt="" class="transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]">
+                                  
+                                     
+                                </div>
+                            
+                                    <div class="font-semibold text-white group-hover:-translate-y-2 transition-all duration-300 lg:px-3 text-[10px] md:text-sm">Laravel</div>
+                                    <div class="font-mono text-[8px] md:text-[10px] translate-x-9 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 md:translate-x-5 lg:translate-x-10 mt-6  text-white transition-all duration-300  absolute lg:text-sm lg:px-3 pl-12 lg:pl-[60px]">Advanced</div>
+                                
+                            </div>
+                           
+                            <div class="flex cursor-pointer items-center rounded border border-amber-500 bg-slate-800 group relative hover:bg-slate-700 py-2 lg:px-3 md:px-2" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="700">
+                                <div class="flex h-12 w-12 items-center justify-center p-0 group-hover:scale-125 transition-all duration-300">
+                                    <img src="/dist/img/Tech/tailwinds.svg" alt="" class="transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]">
+                                  
+                                     
+                                </div>
+                            
+                                    <div class="font-semibold text-white group-hover:-translate-y-2 transition-all duration-300 lg:px-3 text-[10px] md:text-sm">Tailwind</div>
+                                    <div class="font-mono text-[8px] md:text-[10px] translate-x-9 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 md:translate-x-5 lg:translate-x-10 mt-6  text-white transition-all duration-300  absolute lg:text-sm lg:px-3 pl-12 lg:pl-[60px]">Advanced</div>
+                                
+                            </div>
+                            <div class="flex cursor-pointer items-center rounded border border-amber-500 bg-slate-800 group relative hover:bg-slate-700 py-2 lg:px-3 md:px-2" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="800">
+                                <div class="flex h-12 w-12 items-center justify-center p-0 group-hover:scale-125 transition-all duration-300">
+                                    <img src="/dist/img/Tech/bootstrap.svg" alt="" class="transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]">
+                                  
+                                     
+                                </div>
+                            
+                                    <div class="font-semibold text-white group-hover:-translate-y-2 transition-all duration-300 lg:px-3 text-[10px] md:text-sm">Bootstrap</div>
+                                    <div class="font-mono text-[8px] md:text-[10px] translate-x-9 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 md:translate-x-5 lg:translate-x-10 mt-6  text-white transition-all duration-300  absolute lg:text-sm lg:px-3 pl-12 lg:pl-[60px]">Advanced</div>
+                                
+                            </div>
+                          
+                           
+                            
+                                
+                                
+                          
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tech Section End -->
+
+
+      <!-- Tools Section Start -->
+
+    <section id="tools" class="pt-3 pb-15 dark:bg-blue-200 bg-slate-500">
+        <div class="container">
+            <div class="w-full">
+                <div class="max-w-xl mx-auto text-center">
+                    
+                    <h4 class="font-semibold text-xl text-black uppercase pb-3" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">Tools</h4>
+                </div>
+            </div>
+            <div class="flex flex-wrap">
+                <div class="w-full ">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800">
+                        <div class="mt-5 mb-5 grid grid-cols-2 gap-4 px-10 md:grid-cols-3 md:gap-8 xl:grid-cols-4">
+                            
+                            <div class="flex cursor-pointer items-center rounded border border-amber-500 bg-slate-800 group relative hover:bg-slate-700 py-2 lg:px-3 md:px-2" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="000">
+                                <div class="flex h-12 w-12 items-center justify-center p-0 group-hover:scale-125 transition-all duration-300">
+                                    <img src="/dist/img/Tools/Github.svg" alt="" class="transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]">
+                                  
+                                     
+                                </div>
+                            
+                                    <div class="font-semibold text-white group-hover:-translate-y-2 transition-all duration-300 lg:px-3 text-[10px] md:text-sm">Github</div>
+                                    <div class="font-mono text-[8px] md:text-[10px] translate-x-9 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 md:translate-x-5 lg:translate-x-10 mt-6  text-white transition-all duration-300  absolute lg:text-sm lg:px-3 pl-12 lg:pl-[60px]">Git Hosting</div>
+                                
+                            </div>
+                            <div class="flex cursor-pointer items-center rounded border border-amber-500 bg-slate-800 group relative hover:bg-slate-700 py-2 lg:px-3 md:px-2" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="100">
+                                <div class="flex h-12 w-12 items-center justify-center p-0 group-hover:scale-125 transition-all duration-300">
+                                    <img src="/dist/img/Tools/gitBash.svg" alt="" class="transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]">
+                                  
+                                     
+                                </div>
+                            
+                                    <div class="font-semibold text-white group-hover:-translate-y-2 transition-all duration-300 lg:px-3 text-[10px] md:text-sm">Git</div>
+                                    <div class="font-mono text-[8px] md:text-[10px] translate-x-9 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 md:translate-x-5 lg:translate-x-10 mt-6  text-white transition-all duration-300  absolute lg:text-sm lg:px-3 pl-12 lg:pl-[60px]">Version Control</div>
+                                
+                            </div>
+                            <div class="flex cursor-pointer items-center rounded border border-amber-500 bg-slate-800 group relative hover:bg-slate-700 py-2 lg:px-3 md:px-2" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="200">
+                                <div class="flex h-12 w-12 items-center justify-center p-0 group-hover:scale-125 transition-all duration-300">
+                                    <img src="/dist/img/Tools/Vscode.svg" alt="" class="transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]">
+                                  
+                                     
+                                </div>
+                            
+                                    <div class="font-semibold text-white group-hover:-translate-y-2 transition-all duration-300 lg:px-3 text-[10px] md:text-sm">VSCode</div>
+                                    <div class="font-mono text-[8px] md:text-[10px] translate-x-9 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 md:translate-x-5 lg:translate-x-10 mt-6  text-white transition-all duration-300  absolute lg:px-3 lg:text-sm pl-12 lg:pl-[60px]">Code Editor</div>
+                                
+                            </div>
+                            <div class="flex cursor-pointer items-center rounded border border-amber-500 bg-slate-800 group relative hover:bg-slate-700 py-2 lg:px-3 md:px-2" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="300">
+                                <div class="flex h-12 w-12 items-center justify-center p-0 group-hover:scale-125 transition-all duration-300">
+                                    <img src="/dist/img/Tools/mysql.svg" alt="" class="transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]">
+                                  
+                                     
+                                </div>
+                            
+                                    <div class="font-semibold text-white group-hover:-translate-y-2 transition-all duration-300 lg:px-3 text-[10px] md:text-sm">MySql</div>
+                                    <div class="font-mono text-[8px] md:text-[10px] translate-x-9 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 md:translate-x-5 lg:translate-x-10 mt-6  text-white transition-all duration-300  absolute lg:px-3 lg:text-sm pl-12 lg:pl-[60px]">Database</div>
+                                
+                            </div>
+                            <div class="flex cursor-pointer items-center rounded border border-amber-500 bg-slate-800 group relative hover:bg-slate-700 py-2 lg:px-3 md:px-2" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="400">
+                                <div class="flex h-12 w-12 items-center justify-center p-0 group-hover:scale-125 transition-all duration-300">
+                                    <!-- <img src="/dist/img/Tech/react.svg" alt="" class="transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]"> -->
+
+                                    <svg role="img" viewBox="0 0 24 24" class="fill-red-500 transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]" xmlns="http://www.w3.org/2000/svg"><title>Microsoft SQL Server</title><path d="M4.724 2.505s-.08.127-.004.315c.046.116.186.256.34.404 0 0 1.615 1.576 1.813 1.804.895 1.033 1.284 2.05 1.32 3.453.022.9-.151 1.692-.573 2.613-.756 1.649-2.35 3.468-4.81 5.49l.36-.12c.233-.173.548-.359 1.292-.766 1.713-.936 3.636-1.798 5.999-2.686 3.399-1.277 8.99-2.776 12.172-3.263l.331-.051-.05-.08c-.292-.452-.49-.731-.73-1.027-.697-.863-1.542-1.567-2.577-2.146-1.422-.797-3.267-1.416-5.6-1.88a67.93 67.93 0 00-2.191-.375 209.29 209.29 0 01-3.924-.64c-.425-.075-1.06-.181-1.481-.272a9.404 9.404 0 01-.961-.258c-.268-.105-.645-.207-.726-.515zm.936.909c.003-.002.063.017.137.042.136.046.316.1.526.159.146.04.307.084.479.127.218.056.399.104.401.107.024.027.391 1.198.516 1.647.048.172.084.315.081.318a.789.789 0 01-.09-.14c-.424-.746-1.097-1.505-1.874-2.116a3.104 3.104 0 01-.176-.144zm1.79.494c.018-.001.099.012.195.034.619.136 1.725.35 2.435.47.119.02.216.04.216.047a.348.348 0 01-.098.062c-.119.06-.602.349-.763.457-.403.27-.766.559-1.03.821a5.4 5.4 0 01-.197.192c-.003 0-.022-.062-.041-.137a12.09 12.09 0 00-.65-1.779 1.801 1.801 0 01-.071-.165c0-.001 0-.002.004-.002zm3.147.598c.02.007.06.13.129.404a6.05 6.05 0 01.153 1.977l-.012.038-.187-.06c-.388-.124-1.02-.31-1.562-.46a6.625 6.625 0 01-.56-.17c0-.022.449-.471.642-.642.369-.326 1.362-1.098 1.397-1.087zm.25.036c.011-.01 1.504.248 2.182.378.506.097 1.237.25 1.281.269.022.008-.054.05-.297.16-.96.432-1.672.82-2.38 1.293-.186.124-.341.226-.344.226-.004 0-.006-.104-.006-.23 0-.69-.139-1.387-.391-1.976a.688.688 0 01-.045-.12zm3.86.764c.011.011-.038.306-.08.48-.132.54-.482 1.344-.914 2.099a2.26 2.26 0 01-.152.246 1.499 1.499 0 01-.219-.115c-.422-.247-.9-.48-1.425-.697a4.588 4.588 0 01-.278-.12c-.024-.022 1.143-.795 1.762-1.166.495-.297 1.292-.741 1.306-.727zm.276.043c.033 0 .695.18 1.037.283.853.255 1.837.614 2.475.904l.265.12-.187.043c-1.561.36-2.9.773-4.188 1.296-.107.044-.2.08-.207.08a.911.911 0 01.075-.185c.388-.823.638-1.687.703-2.42.006-.067.018-.121.027-.121zm-6.58 1.512c.01-.01.514.108.789.185.413.116 1.292.41 1.292.433 0 .004-.097.089-.215.188-.475.397-.934.813-1.483 1.343a5.27 5.27 0 01-.308.285c-.007 0-.01-.023-.006-.05.083-.611.065-1.395-.05-2.193a1.29 1.29 0 01-.02-.19zm10.61.01c.007.008-.234.385-.384.6-.22.314-.537.726-1.261 1.637l-.954 1.202a9.418 9.418 0 01-.269.333c-.003 0-.05-.066-.103-.146a7.584 7.584 0 00-1.47-1.625 9.59 9.59 0 00-.27-.218.427.427 0 01-.074-.063c0-.01.617-.274 1.088-.466a37.02 37.02 0 012.778-.99c.442-.135.912-.27.919-.264zm.278.073a.93.93 0 01.207.1 12.274 12.274 0 012.428 1.824c.194.19.667.683.66.687l-.363.029c-1.53.115-3.486.44-5.37.893-.128.03-.238.056-.246.056-.007 0 .133-.14.311-.312 1.107-1.063 1.611-1.734 2.205-2.934.088-.178.163-.333.166-.342h.002zm-8.088.83c.051.01.523.23.879.408.325.163.818.426.843.449.003.003-.17.093-.386.201-.683.342-1.268.664-1.878 1.037-.175.107-.32.194-.325.194-.015 0-.01-.013.088-.191a7.702 7.702 0 00.738-2.002c.014-.062.03-.1.041-.097zm-.475.084c.01.01-.112.46-.19.7a9.092 9.092 0 01-.835 1.808l-.09.147-.203-.197a2.671 2.671 0 00-.676-.5 1.009 1.009 0 01-.176-.102c0-.03.62-.593 1.098-.998.343-.29 1.064-.867 1.072-.858zm2.888 1.188l.177.115c.407.264.888.619 1.255.924.206.172.605.53.687.616l.044.047-.294.082a53.8 53.8 0 00-4.45 1.424c-.167.061-.31.112-.32.112-.021 0-.042.019.333-.326.96-.883 1.807-1.856 2.44-2.802zm-.759.19c.009.009-.492.71-.789 1.106-.356.473-.99 1.265-1.426 1.78a8.769 8.769 0 01-.346.397c-.01.003-.015-.05-.016-.133 0-.44-.112-.91-.308-1.308-.083-.168-.097-.208-.08-.224.068-.062 1.127-.666 1.794-1.023.459-.246 1.163-.604 1.171-.595zm-4.59 1.125a3.988 3.988 0 01.812.518c.008.005-.087.083-.21.172-.345.249-.87.644-1.173.886-.32.255-.331.263-.295.207.24-.367.36-.574.486-.84.113-.236.224-.516.304-.76a.675.675 0 01.077-.183zm1.223.96c.017-.003.04.028.139.175.207.31.366.722.407 1.058l.008.073-.497.192c-.89.346-1.711.687-2.266.94-.155.072-.428.202-.607.292-.179.09-.325.16-.325.156 0-.004.112-.089.25-.188 1.087-.79 2.025-1.654 2.732-2.519.075-.092.144-.172.153-.178a.016.016 0 01.006-.002zm-.564.14c.015.014-.401.484-.681.77-.7.715-1.396 1.275-2.256 1.821-.108.069-.206.13-.22.138-.023.014.008-.022.386-.434.238-.259.42-.474.628-.743.136-.177.162-.202.362-.346.537-.388 1.767-1.221 1.781-1.207zM9.925 0c-.08-.01-1.371.455-2.2.791-1.123.457-1.996.894-2.534 1.272-.2.14-.452.393-.488.49a.356.356 0 00-.021.123l.488.46 1.158.37L9.087 4l3.153.542.032-.27-.028-.005-.415-.066-.085-.148a27.702 27.702 0 01-1.177-2.325 12.264 12.264 0 01-.53-1.465C9.969.02 9.962.005 9.925 0zm-.061.186h.005c.003.003.017.105.032.225.062.508.176 1 .354 1.53.134.4.136.377-.024.332-.37-.103-2.032-.388-3.234-.555a8.796 8.796 0 01-.357-.053c-.015-.015.867-.477 1.258-.66.501-.232 1.867-.8 1.966-.819zM6.362 1.814l.141.048c.772.262 2.706.632 3.775.72.12.01.222.021.225.024.003.003-.1.058-.228.122-.515.258-1.083.573-1.476.819-.115.072-.22.13-.235.129a4.868 4.868 0 01-.17-.027l-.144-.023-.365-.355c-.641-.62-1.141-1.1-1.335-1.28zm-.143.114l.511.638c.282.35.564.699.626.774.063.075.111.138.108.14-.014.011-.74-.13-1.125-.219a8.532 8.532 0 01-.803-.212l-.2-.064.001-.049c.003-.245.312-.607.836-.976zm4.352.869c.015.001.032.032.077.131.124.272.51 1.008.603 1.15.03.047.08.05-.433-.033-1.23-.198-1.629-.265-1.629-.273a.36.36 0 01.083-.054 7.13 7.13 0 001.107-.767l.175-.147c.006-.005.012-.008.017-.007zm4.309 8.408l-4.808 1.568-4.18 1.846-1.17.31c-.298.282-.613.568-.948.86-.37.321-.716.612-.98.822a7.46 7.46 0 00-.953.945c-.332.414-.592.854-.704 1.193-.2.61-.103 1.228.285 1.798.495.728 1.48 1.468 2.625 1.972.585.256 1.57.588 2.31.774 1.233.312 3.614.65 4.926.7.266.01.62.01.637-.002.028-.019.233-.405.47-.89.806-1.646 1.389-3.19 1.703-4.508.19-.799.338-1.863.434-3.125.027-.354.037-1.533.016-1.934a13.564 13.564 0 00-.183-1.706.435.435 0 01-.012-.15c.014-.01.059-.025.65-.197zm-1.1.645c.045 0 .16 1.114.191 1.82.006.151.005.247-.004.247-.028 0-.615-.345-1.032-.606a28.716 28.716 0 01-1.162-.772c-.035-.028-.031-.029.266-.131.505-.174 1.704-.558 1.742-.558zm-2.448.803c.03 0 .115.047.315.172.75.47 1.766 1.035 2.2 1.225.136.06.151.036-.16.247-.662.45-1.486.892-2.497 1.342a7.59 7.59 0 01-.331.142.989.989 0 01.043-.2c.245-.905.383-1.82.387-2.554.002-.362.002-.364.037-.373h.006zm-.504.193c.021.022.006.834-.02 1.056a9.206 9.206 0 01-.418 1.837c-.014.017-.511-.468-.676-.66a4.918 4.918 0 01-.669-.973c-.082-.162-.214-.484-.202-.493.056-.04 1.971-.78 1.985-.767zm-2.375.936c.004 0 .008.001.01.004a.881.881 0 01.056.131c.116.315.376.782.602 1.08a6.247 6.247 0 001.017 1.06c.023.02.03.016-.562.24a48.53 48.53 0 01-2.294.8c-.327.106-.604.195-.615.2-.033.011-.023-.009.073-.158.427-.666 1.073-1.97 1.435-2.892.062-.16.122-.32.133-.356.015-.052.031-.07.08-.092a.149.149 0 01.065-.017zm-.728.3c.01.009-.174.398-.356.751-.351.686-.739 1.361-1.253 2.185l-.182.288c-.018.027-.026.018-.082-.094a3.307 3.307 0 01-.28-.842 3.39 3.39 0 01.02-1.083c.047-.227.045-.222.152-.276.462-.237 1.966-.942 1.981-.929zm6.268.255v.154a20.106 20.106 0 01-.255 2.992 9.362 9.362 0 01-1.898-.782c-.354-.194-.865-.507-.85-.522.003-.004.154-.083.334-.177.714-.37 1.395-.77 1.988-1.166.222-.148.555-.389.629-.454zM4.981 15.41c.015 0 .011.028-.012.161a4.137 4.137 0 00-.041.39c-.03.532.057.924.32 1.46.074.15.132.274.129.276-.027.023-2.43.726-3.186.933l-.435.12c-.027.008-.029.002-.02-.06.083-.533.49-1.232 1.058-1.82.378-.39.68-.622 1.195-.915a30.782 30.782 0 01.992-.545zm5.669 1.015c.002-.002.091.045.197.107.777.449 1.86.87 2.783 1.081l.084.02-.115.063c-.482.268-2.071.929-3.694 1.537a68.82 68.82 0 00-.513.194.314.314 0 01-.082.027c0-.004.067-.132.149-.286.456-.852.91-1.887 1.144-2.605.023-.073.044-.135.047-.138zm-.578.19a1.39 1.39 0 01-.063.169 23.534 23.534 0 01-1.261 2.54 9.009 9.009 0 01-.252.433c-.005 0-.114-.066-.244-.145-.77-.472-1.452-1.052-1.9-1.617l-.064-.08.332-.091a23.616 23.616 0 003.19-1.103c.142-.06.26-.109.262-.106zm3.59 1.253c.001 0 .002.001.002.003 0 .08-.183.828-.336 1.37-.128.453-.236.808-.435 1.437a8.533 8.533 0 01-.168.504 15.004 15.004 0 01-3-.841 7.964 7.964 0 01-.639-.283c-.006-.007.213-.11.486-.23 1.655-.721 3.369-1.543 3.955-1.896a.432.432 0 01.135-.064zm-8.287.283c.009.009-.454.671-1.1 1.576l-.587.823c-.097.139-.245.358-.329.488l-.153.236-.162-.137c-.191-.16-.525-.501-.677-.69-.312-.389-.523-.798-.607-1.174-.038-.174-.04-.262-.003-.273a176.26 176.26 0 011.934-.455l1.3-.305c.209-.05.382-.09.384-.089zm.465.178l.117.131a6.763 6.763 0 001.706 1.394c.115.066.202.124.195.128a281.967 281.967 0 01-4.33 1.53.858.858 0 01-.072-.048l-.067-.048.105-.152c.34-.493.768-1.035 1.705-2.162zm2.9 2.073c.003-.003.165.054.362.128.473.177.844.292 1.347.418.617.155 1.51.31 2.038.354.08.006.122.016.11.024-.025.016-.56.194-.953.318a258.526 258.526 0 01-4.636 1.363c-.035.007-.157-.025-.157-.04 0-.009.087-.119.193-.246a22.027 22.027 0 001.476-1.984 56.9 56.9 0 01.22-.335zm-.642.018c.005.005-.253.418-.706 1.132-.192.301-.409.645-.483.762-.075.118-.184.298-.242.4l-.107.185-.054-.014c-.13-.035-1.049-.36-1.291-.456-.301-.12-.615-.264-.846-.389-.289-.156-.655-.388-.627-.397l1.105-.302c1.592-.434 2.473-.683 3.05-.864.109-.033.199-.059.2-.057zm4.523 1.061h.006c.015.038-.575 1.67-.79 2.188-.049.116-.066.145-.092.143a55.54 55.54 0 01-1.433-.2c-.906-.138-2.423-.403-2.806-.49l-.089-.02.543-.122c1.164-.262 1.723-.403 2.29-.577a16.544 16.544 0 002.138-.824c.113-.052.21-.093.233-.098Z"/>
+                                    </svg>
+                                  
+                                     
+                                </div>
+                            
+                                    <div class="font-semibold text-white group-hover:-translate-y-2 transition-all duration-300 lg:px-3 text-[10px] md:text-sm">MSSQL</div>
+                                    <div class="font-mono text-[8px] md:text-[10px] translate-x-9 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 md:translate-x-5 lg:translate-x-10 mt-6  text-white transition-all duration-300  absolute lg:px-3 pl-12 lg:text-sm lg:pl-[60px]">Database</div>
+                                
+                            </div>
+                             <div class="flex cursor-pointer items-center rounded border border-amber-500 bg-slate-800 group relative hover:bg-slate-700 py-2 lg:px-3 md:px-2" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="500">
+                                <div class="flex h-12 w-12 items-center justify-center p-0 group-hover:scale-125 transition-all duration-300">
+                                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"  class="fill-blue-500 transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]"><title>Docker</title><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.376 11.376 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/></svg>
+                                  
+                                     
+                                </div>
+                            
+                                    <div class="font-semibold text-white group-hover:-translate-y-2 transition-all duration-300 lg:px-3 text-[10px] md:text-sm">Docker</div>
+                                    <div class="font-mono text-[8px] md:text-[10px] translate-x-9 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 md:translate-x-5 lg:translate-x-10 mt-6  text-white transition-all duration-300  absolute lg:text-sm lg:px-3 pl-12 lg:pl-[60px]">Virtual Container </div>
+                                
+                            </div>
+                            <div class="flex cursor-pointer items-center rounded border border-amber-500 bg-slate-800 group relative hover:bg-slate-700 py-2 lg:px-3 md:px-2" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="600">
+                                <div class="flex h-12 w-12 items-center justify-center p-0 group-hover:scale-125 transition-all duration-300">
+                                    <!-- <img src="/dist/img/Tech/laravel.svg" alt="" class="transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]"> -->
+
+                                    <svg role="img" viewBox="0 0 24 24" class="fill-yellow-400  transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]" xmlns="http://www.w3.org/2000/svg"><title>VMware</title><path d="M.5 10.1a.505.505 0 00-.197.048.497.497 0 00-.25.68l1.138 2.475c.179.38.38.592.721.592.342 0 .542-.22.72-.592l1.003-2.186a.144.144 0 01.144-.092.16.16 0 01.157.16v2.118a.535.535 0 101.066 0v-1.73a.531.531 0 01.566-.552.52.52 0 01.541.551v1.73a.531.531 0 00.53.593.539.539 0 00.535-.592v-1.73a.531.531 0 01.564-.552.52.52 0 01.543.551v1.73a.531.531 0 00.528.593.535.535 0 00.535-.592v-1.969a1.234 1.234 0 00-1.283-1.23 1.647 1.647 0 00-1.14.486 1.26 1.26 0 00-1.095-.483 1.807 1.807 0 00-1.074.483 1.287 1.287 0 00-.961-.483 1.177 1.177 0 00-1.158.786l-.729 1.716-.933-2.203.011-.004A.505.505 0 00.5 10.1zm18.43.06a.27.27 0 00-.266.274h.002v3.142a.27.27 0 10.535 0v-1.222c0-1.037.571-1.56 1.27-1.643a.266.266 0 00.238-.274.258.258 0 00-.266-.269 1.465 1.465 0 00-1.242.88v-.614a.266.266 0 00-.271-.274zm-6.735.008a.273.273 0 00-.25.217l-.912 2.627-.902-2.62a.28.28 0 00-.274-.22.266.266 0 00-.27.258.493.493 0 00.034.144l1.09 3.037.02-.007a.319.319 0 00.298.242.3.3 0 00.293-.242l.903-2.583.896 2.583a.3.3 0 00.293.242h.018a.319.319 0 00.293-.242l1.097-3.038a.512.512 0 00.033-.144.258.258 0 00-.265-.25.262.262 0 00-.258.209l-.918 2.63-.904-2.626a.285.285 0 00-.278-.217h-.025a.273.273 0 00-.012 0zm10.168.008a1.75 1.75 0 00-1.691 1.851 1.765 1.765 0 001.76 1.858l-.008.013a1.784 1.784 0 001.33-.539.228.228 0 00.082-.17.228.228 0 00-.379-.168 1.435 1.435 0 01-1.018.415 1.237 1.237 0 01-1.24-1.207h2.555a.247.247 0 00.246-.247c0-.945-.593-1.806-1.637-1.806zm-5.744.002a1.571 1.571 0 00-.158.006 2.384 2.384 0 00-1.078.205.22.22 0 00-.143.222.24.24 0 00.235.229.266.266 0 00.095-.024 1.822 1.822 0 01.834-.162c.691 0 1.07.334 1.07.979v.125a3.796 3.796 0 00-1.103-.15c-.892 0-1.52.4-1.52 1.16l-.003-.004c0 .736.671 1.117 1.34 1.117a1.575 1.575 0 001.298-.62v.343a.247.247 0 00.254.25.254.254 0 00.258-.262v-1.983a1.416 1.416 0 00-.379-1.046 1.571 1.571 0 00-1-.385zm5.719.43c.714 0 1.085.565 1.139 1.214h-2.278a1.222 1.222 0 011.139-1.215zm-5.885 1.382a3.75 3.75 0 011.057.153V12.49c0 .57-.539.973-1.2.973-.485 0-.904-.261-.904-.713 0-.467.375-.76 1.047-.76Z"/></svg>
+                                  
+                                     
+                                </div>
+                            
+                                    <div class="font-semibold text-white group-hover:-translate-y-2 transition-all duration-300 lg:px-3 text-[10px] md:text-sm">VMware</div>
+                                    <div class="font-mono text-[8px] md:text-[10px] translate-x-9 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 md:translate-x-5 lg:translate-x-10 mt-6  text-white transition-all duration-300  absolute lg:text-sm lg:px-3 pl-12 lg:pl-[60px]">Cloud Computing</div>
+                                
+                            </div>
+                            <div class="flex cursor-pointer items-center rounded border border-amber-500 bg-slate-800 group relative hover:bg-slate-700 py-2 lg:px-3 md:px-2" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="700">
+                                <div class="flex h-12 w-12 items-center justify-center p-0 group-hover:scale-125 transition-all duration-300">
+                                    <img src="/dist/img/Tools/corel.png" alt="" class="transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]">
+                                  
+                                     
+                                </div>
+                            
+                                    <div class="font-semibold text-white group-hover:-translate-y-2 transition-all duration-300 lg:px-3 text-[10px] md:text-sm">CorelDraw</div>
+                                    <div class="font-mono text-[8px] md:text-[10px] translate-x-9 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 md:translate-x-5 lg:translate-x-10 mt-6  text-white transition-all duration-300  absolute lg:text-sm lg:px-3 pl-12 lg:pl-[60px]">Graphics Design</div>
+                                
+                            </div>
+                            <div class="flex cursor-pointer items-center rounded border border-amber-500 bg-slate-800 group relative hover:bg-slate-700 py-2 lg:px-3 md:px-2" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="800">
+                                <div class="flex h-12 w-12 items-center justify-center p-0 group-hover:scale-125 transition-all duration-300">
+                                    <img src="/dist/img/Tools/photoshop.svg" alt="" class="transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]">
+                                  
+                                     
+                                </div>
+                            
+                                    <div class="font-semibold text-white group-hover:-translate-y-2 transition-all duration-300 lg:px-3 text-[10px] md:text-sm">Photo Shop</div>
+                                    <div class="font-mono text-[8px] md:text-[10px] translate-x-9 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 md:translate-x-5 lg:translate-x-10 mt-6  text-white transition-all duration-300  absolute lg:text-sm lg:px-3 pl-12 lg:pl-[60px]">Image Editor</div>
+                                
+                            </div>
+                            <div class="flex cursor-pointer items-center rounded border border-amber-500 bg-slate-800 group relative hover:bg-slate-700 py-2 lg:px-3 md:px-2" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="900">
+                                <div class="flex h-12 w-12 items-center justify-center p-0 group-hover:scale-125 transition-all duration-300">
+                                    <img src="/dist/img/Tools/bstudio.png" alt="" class="transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]">
+                                  
+                                     
+                                </div>
+                            
+                                    <div class="font-semibold text-white group-hover:-translate-y-2 transition-all duration-300 lg:px-3 text-[10px] md:text-sm">BootstrapStudio</div>
+                                    <div class="font-mono text-[8px] md:text-[10px] translate-x-9 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 md:translate-x-5 lg:translate-x-10 mt-6  text-white transition-all duration-300  absolute lg:text-sm lg:px-3 pl-12 lg:pl-[60px]">Design Web</div>
+                                
+                            </div>
+                            <div class="flex cursor-pointer items-center rounded border border-amber-500 bg-slate-800 group relative hover:bg-slate-700 py-2 lg:px-3 md:px-2" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="900">
+                                <div class="flex h-12 w-12 items-center justify-center p-0 group-hover:scale-125 transition-all duration-300">
+                                    <!-- <img src="/dist/img/Tools/bstudio.png" alt="" class="transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]">
+                                   -->
+
+                                   <svg role="img" viewBox="0 0 24 24" class="fill-sky-400  transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]" xmlns="http://www.w3.org/2000/svg"><title>WordPress</title><path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0"/></svg>
+                                     
+                                </div>
+                            
+                                    <div class="font-semibold text-white group-hover:-translate-y-2 transition-all duration-300 lg:px-3 text-[10px] md:text-sm">Workpress</div>
+                                    <div class="font-mono text-[8px] md:text-[10px] translate-x-9 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 md:translate-x-5 lg:translate-x-10 mt-6  text-white transition-all duration-300  absolute lg:text-sm lg:px-3 pl-12 lg:pl-[60px]">CMS <span class="text-[8px]">(Content Management System)</span></div>
+                                
+                            </div>
+                            <div class="flex cursor-pointer items-center rounded border border-amber-500 bg-slate-800 group relative hover:bg-slate-700 py-2 lg:px-3 md:px-2" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="900">
+                                <div class="flex h-12 w-12 items-center justify-center p-0 group-hover:scale-125 transition-all duration-300">
+                                    <!-- <img src="/dist/img/Tools/bstudio.png" alt="" class="transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]">
+                                   -->
+
+                                 <svg role="img" viewBox="0 0 24 24" class="fill-pink-700  transition-all duration-300 h-[50%] w-[50%] md:h-[65%] md:w-[65%] lg:h-[85%] lg:w-[85%]" xmlns="http://www.w3.org/2000/svg"><title>Elementor</title><path d="M12 0C5.372 0 0 5.372 0 12c0 6.626 5.372 12 12 12s12-5.372 12-12c0-6.626-5.372-12-12-12ZM9 17H7V7H9Zm8 0H11V15h6Zm0-4H11V11h6Zm0-4H11V7h6Z"/></svg>
+                                     
+                                </div>
+                            
+                                    <div class="font-semibold text-white group-hover:-translate-y-2 transition-all duration-300 lg:px-3 text-[10px] md:text-sm">Elementor</div>
+                                    <div class="font-mono text-[8px] md:text-[10px] translate-x-9 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 md:translate-x-5 lg:translate-x-10 mt-6  text-white transition-all duration-300  absolute lg:text-sm lg:px-3 pl-12 lg:pl-[60px]">Page Builder</span></div>
+                                
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tools Section End -->
+
+
+    <!-- Project section start  -->
+        <section id="project" class="pt-20 pb-32 bg-slate-100 dark:bg-dark">
+        <div class="container items-center">
+            <div class="max-w-xl mx-auto text-center mb-16">
+                <!-- <h4 class="font-semibold text-lg text-primary mb-2 uppercase">Proje</h4> -->
+                <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="000">Project</h2>
+                <p class="font-medium text-md text-secondary md:text-lg" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">Explore my work to create projects using several technologies
+                    </p>
+            </div>
+               
+            <div id="projectContainer" class="flex flex-wrap">
+                <div class="w-full px-4 md:w-1/2 lg:w-1/2 xl:w-1/3 group relative" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800 group-hover:scale-105 transition-all duration-300 bg-slate-300">
+                        
+                         <div class="relative my-3 px-3 flex h-[180px] items-center justify-center">
+                            <img src="dist/img/Project/bnctl-website.jpg" alt="HelpDesk Management System" class="m-auto h-full w-full rounded-md">
+
+                        </div>
+                        <div class="h-[300px] px-6">
+                            <h3>
+                                <!-- Truncate funsaunatu halo judul lakon tiha karik judul naruk  -->
+                                <a href="#" class="block mb-3 font-semibold text-sm text-dark dark:text-white hover:text-primary ">BNCTL NEW WEBSITE</a>
+                            </h3>
+                            <p class="max-h-[130px] min-h-[130px] font-medium text-xs text-secondary text-justify md:text-sm overflow-y-auto ">Developed this website to replace BNCTL's previous platform, aiming to provide more comprehensive information and a user-friendly interface that simplifies access for users. The website features essential functionalities, including a Loan Calculator for quick and precise loan estimations, Foreign Exchange Rate updates to keep clients informed, a System Login for convenient banking access, a detailed Customer Information and Contact section, and a secure Whistleblowing System to uphold transparency and accountability
+
+                                This project reflects a strong commitment to innovation and client satisfaction, delivering a modern platform that enhances the user experience while supporting BNCTL's mission to provide accessible and trustworthy financial services.
+                                
+                            </p>
+                            <div class="font-mono text-xs text-secondary italic mt-10">Laravel 11, Alpine JS, Livewire, Spatie, Flattern - Multipurpose Bootstrap Business Template, Vanila css, Embed Google Map. </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 md:w-1/2 lg:w-1/2 xl:w-1/3 group relative" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800 group-hover:scale-105 transition-all duration-300 bg-slate-300">
+                        
+                         <div class="relative my-3 px-3 flex h-[180px] items-center justify-center">
+                            <img src="dist/img/Project/kolping.png" alt="HelpDesk Management System" class="m-auto h-full w-full rounded-md">
+
+                        </div>
+                        <div class="h-[300px] px-6">
+                            <h3>
+                                <!-- Truncate funsaunatu halo judul lakon tiha karik judul naruk  -->
+                                <a href="#" class="block mb-3 font-semibold text-sm text-dark dark:text-white hover:text-primary ">Kolping Timor-Leste</a>
+                            </h3>
+                            <p class="max-h-[130px] min-h-[130px] font-medium text-xs text-secondary text-justify md:text-sm overflow-y-auto ">This website displays information, activities and programs that have been carried out by the company colping in the area of ​​solidarity between the people of Timor-Leste.
+                                
+                            </p>
+                            <div class="font-mono text-xs text-secondary italic mt-10">Bootstrap, Vanila css, Javascrip,spatie, Embed Google Map, Laravel 8, DB Mysql.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 md:w-1/2 lg:w-1/2 xl:w-1/3 group relative" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800 group-hover:scale-105 transition-all duration-300 bg-slate-300">
+                        
+                        <div class="relative my-3 px-3 flex h-[180px] items-center justify-center">
+                            <img src="dist/img/Project/HMS.png" alt="HelpDesk Management System" class="m-auto h-full w-full rounded-md">
+
+                        </div>
+                        <div class="h-[300px] px-6">
+                            <h3 class="items-center justify-center">
+                                <!-- Truncate funsaunatu halo judul lakon tiha karik judul naruk  -->
+                                <a href="#" class="items-center block mb-3 font-semibold text-sm text-dark dark:text-white hover:text-primary overflow-hidden">HelpDesk Management System</a>
+                            </h3>
+                            <p class="max-h-[130px] min-h-[130px] font-medium text-xs text-secondary mb-6 text-justify md:text-sm overflow-auto">This application is a system to help manage IT assets in a company such as,User, IP and description of a computer, laptop, printer, server and ATM,can also make incoming stock, outgoing stock and calculating stock data, import asset lists using excel and reports in the form of pdf and excel. there are 4 authentication user logins. log activity user login and user activity
+                               
+                            </p>
+                            <div class="font-mono text-xs text-secondary italic mt-10">Bootstrap, Vanila Css, Javascript, spatie activity log, Laravel Excel, sweet-Alert, Browser-detect, Laravel 8, DB Mysql / MSSQL</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full px-4 md:w-1/2 lg:w-1/2 xl:w-1/3 group relative" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800 group-hover:scale-105 transition-all duration-300 bg-slate-300">
+                        <!-- <img src="https://source.unsplash.com/360x200?Programming" alt="Programming" class="w-full"> -->
+                        <div class="relative my-3 px-3 flex h-[180px] items-center justify-center">
+                            <img src="dist/img/Project/MetodeAHP.png" alt="HelpDesk Management System" class="m-auto h-full w-full rounded-md">
+
+                        </div>
+                        
+                        <div class="h-[300px] px-8">
+                            <h3>
+                                <!-- Truncate funsaunatu halo judul lakon tiha karik judul naruk  -->
+                                <p class="text-sm items-center block mb-3 font-semibold text-dark dark:text-white hover:text-primary cursor-pointer">Implementation of the Decision Support System with the AHP method</p>
+                            </h3>
+                            <p class="max-h-[130px] min-h-[130px] font-medium text-xs text-secondary mb-6 text-justify md:text-sm overflow-auto">I did this application for a student friend for a thesis ezame, with DSS implementation using the AHP method in this there are complex calculations in making car selection decisions. there are criteria, the basic AHP scale is the weight value, the result is the criterion value consistent ratio of the final mean (x max) IR CI and CR values. and Results of alternative values ​​based on each criterion and reports the value of the weights and also criterion clarification report
+                               
+                            </p>
+                            <div class="font-mono text-xs text-secondary italic mt-10">Bootstrap, Vanila Css, PHP, Javascript,jquery, highcharts, DB Mysql.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 md:w-1/2 lg:w-1/2 xl:w-1/3 group relative" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800 group-hover:scale-105 transition-all duration-300 bg-slate-300">
+                        <!-- <img src="https://source.unsplash.com/360x200?Programming" alt="Programming" class="w-full"> -->
+                        <div class="relative my-3 px-3 flex h-[180px] items-center justify-center">
+                            <img src="dist/img/Project/portfolio2.png" alt="HelpDesk Management System" class="m-auto h-full w-full rounded-md">
+
+                        </div>
+                        
+                        <div class="h-[300px] px-8">
+                            <h3>
+                                <!-- Truncate funsaunatu halo judul lakon tiha karik judul naruk  -->
+                                <p class="text-sm items-center block mb-3 font-semibold text-dark dark:text-white hover:text-primary cursor-pointer">Portfolio</p>
+                            </h3>
+                            <p class="max-h-[130px] min-h-[130px] font-medium text-xs text-secondary mb-6 text-justify md:text-sm overflow-auto">This is my own portfolio website, featuring my last education, experience, identity including my skills I designed it using several ideas that I got from various sources that I read and saw on the internet, this website also has a dark mode feature.
+                               
+                            </p>
+                            <div class="font-mono text-xs text-secondary italic mt-10">TailwindsCSS, Vanila Css, Javascript, AOS Library.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 md:w-1/2 lg:w-1/2 xl:w-1/3 group relative" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800 group-hover:scale-105 transition-all duration-300 bg-slate-300">
+                        <!-- <img src="https://source.unsplash.com/360x200?Programming" alt="Programming" class="w-full"> -->
+                        <div class="relative my-3 px-3 flex h-[180px] items-center justify-center">
+                            <img src="dist/img/Project/TFC.png" alt="HelpDesk Management System" class="m-auto h-full w-full rounded-md">
+
+                        </div>
+                        
+                        <div class="h-[300px] px-8">
+                            <h3>
+                                <!-- Truncate funsaunatu halo judul lakon tiha karik judul naruk  -->
+                                <p class="text-sm items-center block mb-3 font-semibold text-dark dark:text-white hover:text-primary cursor-pointer">Final exam assessment system </p>
+                            </h3>
+                            <p class="max-h-[130px] min-h-[130px] font-medium text-xs text-secondary mb-6 text-justify md:text-sm overflow-auto">This final exam assessment system was created in order to help teachers, in giving grades to students for thesis exams so that they are efficient and fast in assessing students so that they are no longer manual in giving grades. This system also has 5 authentication users to log in, each examiner and supervisor can directly give grades to the students being tested.
+
+
+                               
+                            </p>
+                            <div class="font-mono text-xs text-secondary italic mt-10">Bootstrap, Vanila Css, PHP, Javascript,jquery, highcharts, DB Mysql.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full px-4 md:w-1/2 lg:w-1/2 xl:w-1/3 group relative" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+                <div class="rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800 group-hover:scale-105 transition-all duration-300 bg-slate-300">
+                    
+                    <div class="relative my-3 px-3 flex h-[180px] items-center justify-center">
+                        <img src="dist/img/Project/printing1.png" alt="HelpDesk Management System" class="m-auto h-full w-full rounded-md">
+
+                    </div>
+                    
+                    <div class="h-[300px] px-8">
+                        <h3>
+                            <!-- Truncate funsaunatu halo judul lakon tiha karik judul naruk  -->
+                            <p class="text-sm items-center block mb-3 font-semibold text-dark dark:text-white hover:text-primary cursor-pointer">CMS Website Printing </p>
+                        </h3>
+                        <p class="max-h-[130px] min-h-[130px] font-medium text-xs text-secondary mb-6 text-justify md:text-sm overflow-auto">This website is based on a CMS (Content Management System) that I created to display a company profile that focuses on website development, mobile applications and UI/UX.
+                        This website is also dynamic and responsive and can be accessed on any device.
+
+
+                            
+                        </p>
+                        <div class="font-mono text-xs text-secondary italic mt-10">CMS Workpress, Elementor Plugins, Templete Astra, bootstrap icon, DB Mysql.</div>
+                    </div>
+                </div>
+                </div>
+                <div class="w-full px-4 md:w-1/2 lg:w-1/2 xl:w-1/3 group relative" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-800 group-hover:scale-105 transition-all duration-300 bg-slate-300">
+                        <!-- <img src="https://source.unsplash.com/360x200?Programming" alt="Programming" class="w-full"> -->
+                        <div class="relative my-3 px-3 flex h-[180px] items-center justify-center">
+                            <img src="dist/img/Project/kpi.png" alt="HelpDesk Management System" class="m-auto h-full w-full rounded-md">
+
+                        </div>
+                        
+                        <div class="h-[300px] px-8">
+                            <h3>
+                                <!-- Truncate funsaunatu halo judul lakon tiha karik judul naruk  -->
+                                <p class="text-sm items-center block mb-3 font-semibold text-dark dark:text-white hover:text-primary cursor-pointer">KPI Management System </p>
+                            </h3>
+                            <p class="max-h-[130px] min-h-[130px] font-medium text-xs text-secondary mb-6 text-justify md:text-sm overflow-auto">in many companies today many of which provide employee KPIs are still done manually. Because of that, I took the initiative to create a KPI system to manage employee performance so that it is easier and more effective in evaluating employee performance. This system has the function of giving employee values based on tasks or achievements that have been made in the company. there are many features in this system such as multiple user authentication, role management, user permissions. etc.
+
+                               
+                            </p>
+                            <div class="font-mono text-xs text-secondary italic mt-10">Bootstrap, Vanila Css, Laravel, Javascript, spatie/laravel-permission, DB Mysql / MSSQL</div>
+                        </div>
+                    </div>
+                </div>
+             
+
+
+
+
+
+            </div>
+       
+       
+            
+
+            <div class="flex justify-center">
+                <button id="loadMoreBtn" class="px-4 py-2 mt-6 mx-auto font-medium text-sm text-white transition-all duration-300 bg-teal-400 rounded-lg hover:bg-cyan-500">
+                    Load More
+                </button>
+
+                <button id="loadLessBtn" class="px-4 py-2 mt-6 mx-auto font-medium text-sm text-white transition-all duration-300 bg-teal-400 rounded-lg hover:bg-cyan-500 hidden">
+                    Load Less
+                </button>
+            </div>
+
+
+
+   <!-- <button id="loadMoreBtn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 items-center  ">Load More</button> -->
+               
+  
+
+        </div>
+        
+    </section> 
+    <!-- Project section End  -->
+
+
+
+    <!-- Contact Section Start -->
+        <section id="contact" class="pt-36 pb-32 bg-slate-200 dark:bg-slate-800">
+            <div class="container">
+                <div class="w-full px-4">
+                    <div class="max-w-xl mx-auto text-center mb-16">
+                        <h4 class="font-mono text-lg text-primary mb-2" data-aos="fade-up" data-aos-duration="3000">What's Next?</h4>
+                        <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white" data-aos="fade-up" data-aos-duration="3000">Get In Touch</h2>
+                        <p class="font-medium text-md text-secondary md:text-lg" data-aos="fade-up" data-aos-duration="3000" >Whether you have a question or just want to say hello, I'll do my best to get back to you!</p>
+                    </div>
+                </div>
+
+                
+                <div class=" flex justify-center" data-aos="fade-up"
+     data-aos-duration="3000">
+                    <button class="font-mono bg-transparent hover:bg-cyan-500 text-cyan-500 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" >  <a href="mailto:octavio.ximenes96@gmail.com">Say Hello</a>
+                        
+                    </button>
+                </div>
+                
+
+            </div>
+        </section>
+    <!-- Contact Section End -->
+
+    <!-- Media Start -->
+        <div class="fixed bottom-0 left-0 w-[105px] invisible lg:visible" >
+            <div class="flex flex-col items-center ">
+                <div  data-aos="fade-right" data-aos-delay="000" data-aos-duration="1000">
+                    <div class="cursor-pointer px-2 py-3 text-primary transition-all duration-300 hover:-translate-y-1 hover:text-accent" title="Whatsap">
+                        <a href="https://wa.me/76141304" target="_blank" class="w-9 h-9 mr-3 rounded-full flex  justify-center items-center border border-slate-300 dark:bg-white hover:border-primary hover:bg-primary hover:text-white">
+                            <svg role="img" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>WhatsApp</title><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+                    <div class="cursor-pointer px-2 py-3 text-primary transition-all duration-300 hover:-translate-y-1 hover:text-accent" title="Linkedin">
+                            <a href="https://www.facebook.com/OctavioXimenes96/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex  justify-center items-center border border-slate-300 dark:bg-white hover:border-primary hover:bg-primary hover:text-white">
+                            <svg role="img" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000"s>
+                    <div class="cursor-pointer px-2 py-3 text-primary transition-all duration-300 hover:-translate-y-1 hover:text-accent" title="Linkedin">
+                            <a href="https://www.instagram.com/octavio.ximenes/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex  justify-center items-center border border-slate-300 dark:bg-white hover:border-primary hover:bg-primary hover:text-white">
+                            <svg role="img" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+                        </a>
+                    </div>
+                </div> -->
+                <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
+                    <div class="cursor-pointer px-2 py-3 text-primary transition-all duration-300 hover:-translate-y-1 hover:text-accent" title="Linkedin">
+                        <a href="https://www.linkedin.com/in/octavio-ximenes-2751b4210/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex  justify-center items-center border border-slate-300 dark:bg-white hover:border-primary hover:bg-primary hover:text-white">
+                            <svg role="img" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                    <div class="mt-4 h-20 w-[2px] bg-black dark:bg-white"></div>
+
+            </div>
+        </div>
+    <!-- Media End -->
+  
+
+    <!-- Email Start  -->
+        <div class="fixed bottom-0 right-0 w-[105px] invisible lg:visible" data-aos="flip-up" data-aos-offset="200"  data-aos-duration="1000">
+            <div class="flex flex-col items-center">
+                <div data-aos="fade-left" data-aos-duration="600" class="aos-init aos-animate">
+                    <a href="mailto:ulinnajaaldi24@gmail.com" class="writ px-2 py-3 font-mono text-xs tracking-[0.075em] text-slate-500 dark:text-white transition-all duration-300 hover:-translate-y-1 hover:text-accent" style="writing-mode:vertical-rl">octavio.ximenes96@gmail.com</a>
+                </div>
+                <div class="mt-4 h-20 w-[2px] bg-black dark:bg-white">
+                </div>
+            </div>
+        </div>
+    <!-- Email End -->
+
+    <!-- Footer Section Start -->
+    <footer class="bg-dark pt-24 pb-12">
+        <div class="container">
+           <div class="flex flex-wrap">
+                <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
+                    <h2 class="font-bold text-4xl text-white mb-5">Sello</h2>
+                    <h3>Contact</h3>
+                    <p>Octavio.ximenes96@gmail.com</p>
+
+                    <p>Rua. Becussi-Centro</p>
+                    <p>Becora, Dili, Timor-Leste</p>
+                </div>
+
+                <div class="w-full px-4 mb-12 md:w-1/3">
+                    <h3 class="font-semibold text-xl text-white mb-5">Tautan</h3>
+                    <ul class="text-slate-300">
+                        <li>
+                            <a href="#home" class="inline-block text-base hover:text-primary mb-3">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="inline-block text-base hover:text-primary mb-3">About</a>
+                        </li>
+                        <li>
+                            <a href="#tech" class="inline-block text-base hover:text-primary mb-3"> Tech & Tools</a>
+                        </li>
+                        <li>
+                            <a href="#project" class="inline-block text-base hover:text-primary mb-3"> Project</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="inline-block text-base hover:text-primary mb-3">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w-full px-4 mb-12 md:w-1/3">
+                    <h3 class="font-semibold text-xl text-white mb-5">Location</h3>
+                    <ul class="text-slate-300">
+                        <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=-8.56493838664383, 125.60812337731898&t=k&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}</style><style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style></div></div>
+                    </ul>
+                </div>
+           </div>
+
+
+
+           <div class="w-full pt-10 border-t border-slate-700">
+
+                <p class="font-medium text-xs text-slate-500 text-center">Build by <a href="https://www.facebook.com/OctavioXimenes96/" class="font-bold text-primary">Octavio Ximenes</a> All right reserved
+           </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Back to top start  -->
+    <a href="#home" class="flex fixed z-[9999] items-center justify-center bottom-4 right-20 h-10 w-10 bg-blue-400 rounded-full" id="top">
+        <!-- <span class="block w-5 h-5 border-t-2 border-l-2 rotate-45 mt-2 hover:animate-pulse"></span> -->
+        <span class="block w-5 h-5 border-t-4 border-r-4 -rotate-45 mt-2"></span>
+    </a>
+    <!-- Back to top end  -->
+
+
+    <script src="dist/js//script.js"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                 once: true,
+            });
+        </script>
+
+
+   
+<script>
+    const projectContainer = document.getElementById('projectContainer');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    const loadLessBtn = document.getElementById('loadLessBtn');
+
+    const projects = projectContainer.children;
+    const totalProjects = projects.length;
+    const projectsToShow = 6;
+    let visibleProjects = projectsToShow;
+
+    for (let i = projectsToShow; i < totalProjects; i++) {
+        projects[i].classList.add('hidden');
+    }
+
+    loadMoreBtn.addEventListener('click', function () {
+        for (let i = visibleProjects; i < visibleProjects + projectsToShow; i++) {
+            if (projects[i]) {
+                projects[i].classList.remove('hidden');
+            }
+        }
+
+        visibleProjects += projectsToShow;
+
+        if (visibleProjects >= totalProjects) {
+            loadMoreBtn.classList.add('hidden');
+            loadLessBtn.classList.remove('hidden');
+        }
+    });
+
+    loadLessBtn.addEventListener('click', function () {
+        for (let i = visibleProjects - 1; i >= visibleProjects - projectsToShow; i--) {
+            if (projects[i]) {
+                projects[i].classList.add('hidden');
+            }
+        }
+
+        visibleProjects -= projectsToShow;
+
+        if (visibleProjects <= projectsToShow) {
+            loadMoreBtn.classList.remove('hidden');
+            loadLessBtn.classList.add('hidden');
+        }
+    });
+</script>
+
+</body>
+</html>
